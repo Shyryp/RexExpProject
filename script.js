@@ -15,8 +15,6 @@ RGB(140,150,160)
 RGB(0,0,0)
 RGB(59,59,59)
 RGB(099,099,099)
-
-
 #606060
 #505050
 #909090
@@ -39,7 +37,7 @@ while ((m = regex.exec(str)) !== null) {
     }
     
     // The result can be accessed through the `m`-variable.
-    m.forEach((match, groupIndex) => {
-        console.log(`Found match, group ${groupIndex}: ${match}`);
+    m.forEach((match) => {
+        console.log(`Found match: ${match}`);
     });
 }
