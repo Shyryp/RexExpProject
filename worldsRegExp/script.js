@@ -1,3 +1,4 @@
+
 var regex = "\\b(\\w|[-\'])+\\b";
 
 function doFunction()
