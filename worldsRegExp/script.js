@@ -2,6 +2,7 @@ var regex = "\\b(\\w|[-\'])+\\b";
 
 function doFunction()
 {	
+	
 	regex = new RegExp(document.getElementById('regexp').value, 'gm');
 	console.log(regex);
 	const str = document.getElementById('input_data_color_gray').value;
