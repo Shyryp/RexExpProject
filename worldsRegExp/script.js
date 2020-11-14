@@ -14,7 +14,7 @@ function doFunction()
 		}	
 		if(`${m[0].toLowerCase()}` in dict)	
 		{
-			dict[`${m[0].toLowerCase()})`] += 1;
+			dict[`${m[0].toLowerCase()}`] += 1;
 		}
 		else
 		{	
