@@ -12,7 +12,7 @@ function doFunction()
 		if (m.index === regex.lastIndex) {
 			regex.lastIndex++;
 		}		
-		output += `Входное значение: ${m[0]}\nНайдено совпадение: ${m[0]}\n`;
+		output += `Входное значение: ${m[0]}\nНайдено совпадение: ${m[0]}\nРезультат теста: Положительный\n\n`;
 	}
 
 	document.getElementById('output_data_color_gray').value = output;
