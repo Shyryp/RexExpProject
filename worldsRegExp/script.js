@@ -12,13 +12,13 @@ function doFunction()
 		if (m.index === regex.lastIndex) {
 			regex.lastIndex++;
 		}	
-		if(`${m[0]}` in dict)	
+		if(`${m[0]}.toLowerCase()` in dict)	
 		{
-			dict[`${m[0]}`] += 1;
+			dict[`${m[0]}.toLowerCase()`] += 1;
 		}
 		else
 		{	
-			dict[`${m[0]}`] = 1;
+			dict[`${m[0]}.toLowerCase()`] = 1;
 		}
 	}
 	
