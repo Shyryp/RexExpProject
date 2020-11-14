@@ -1,8 +1,7 @@
 var regex = '\\#([4-9A-C][0-9A-F])\\1{2}|rgb\\(((([6-9][0-9]),\\4,\\4)|((1[0-9][0-9]),\\6,\\6)|((20[0-9]),\\8,\\8))\\)';
 
 function doFunction()
-{	
-	
+{		
 	regex = new RegExp(document.getElementById('regexp').value, 'gmi');
 	console.log(regex);
 	const str = document.getElementById('input_data_color_gray').value;
@@ -10,7 +9,7 @@ function doFunction()
 	let m;
 	var output = '';
 	//while ((m = regex.exec(str)) !== null) {
-	for(var color in data)
+	for(var color of data)
 	{
 		if((m = regex.exec(color)) !== null)
 		{
@@ -21,7 +20,7 @@ function doFunction()
 		}
 		else
 		{
-			output += `Входное значение: ${m[0]}\nРезультат теста: Отрицательный\n\n`;
+			output += `Входное значение: ${color}\nРезультат теста: Отрицательный\n\n`;
 		}
 	}
 	//}
