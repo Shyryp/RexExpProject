@@ -2,7 +2,7 @@ var regex = '\\#([4-9A-C][0-9A-F])\\1{2}|rgb\\(((([6-9][0-9]),\\4,\\4)|((1[0-9][
 
 function doFunction()
 {	
-	regex = new RegExp(document.getElementById('regexp').value, 'gm');
+	regex = new RegExp(document.getElementById('regexp').value, 'gmi');
 	console.log(regex);
 	const str = document.getElementById('input_data_color_gray').value;
 	let m;
