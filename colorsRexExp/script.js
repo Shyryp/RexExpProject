@@ -6,14 +6,25 @@ function doFunction()
 	regex = new RegExp(document.getElementById('regexp').value, 'gmi');
 	console.log(regex);
 	const str = document.getElementById('input_data_color_gray').value;
+	var data = str.split("\n");
 	let m;
 	var output = '';
-	while ((m = regex.exec(str)) !== null) {
-		if (m.index === regex.lastIndex) {
-			regex.lastIndex++;
-		}		
-		output += `Входное значение: ${m[0]}\nНайдено совпадение: ${m[0]}\nРезультат теста: Положительный\n\n`;
+	//while ((m = regex.exec(str)) !== null) {
+	for(var color in data)
+	{
+		if((m = regex.exec(color)) !== null)
+		{
+			if (m.index === regex.lastIndex) {
+				regex.lastIndex++;
+			}		
+			output += `Входное значение: ${m[0]}\nНайдено совпадение: ${m[0]}\nРезультат теста: Положительный\n\n`;
+		}
+		else
+		{
+			output += `Входное значение: ${m[0]}\nРезультат теста: Отрицательный\n\n`;
+		}
 	}
+	//}
 
 	document.getElementById('output_data_color_gray').value = output;
 }
